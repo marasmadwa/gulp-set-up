@@ -22,9 +22,9 @@ const gutil = require('gulp-util');
 const showErrors = function (err) {
     console.log(gutil.colors.red(err.toString()));
     this.emit('end');
-};```
+};
 
-```gulp.task("browseSync", function () {
+gulp.task("browseSync", function () {
     browserSync.init({
         server: ".",
         notify: true,
@@ -32,9 +32,9 @@ const showErrors = function (err) {
         //port: 3000,
         open: true 
     });
-});```
+});
 
-```gulp.task('sass', function () {
+gulp.task('sass', function () {
     return gulp.src('./scss/main.scss')
         .pipe(plumber({
             errorHandler: showErrors
@@ -50,21 +50,21 @@ const showErrors = function (err) {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
-});```
+});
 
-```gulp.task('watch', function () {
+gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
-});```
+});
 
-```gulp.task('default', function () {
+gulp.task('default', function () {
     gulp.start(["sass", "browseSync", "watch"]);
 });```
 
  **Grid** 
  my grid.scss file
  
- `$gap: 10px;//gap between columns
+ $gap: 10px;//gap between columns
 $columns: 12;// number of columns
 $breakpoint: 768px; 
 .container {
