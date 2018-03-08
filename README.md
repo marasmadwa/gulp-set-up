@@ -4,7 +4,8 @@ My gulp set up which includes scss file with basic grid set up.
 
 ## Getting Started
 
-**What is gulp?**
+**What is gulp?**--
+
 Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.
 
 How to install gulp ? Check this website : (https://gulpjs.com/);
@@ -62,7 +63,8 @@ gulp.task('default', function () {
 });```
 
 ```
- **Grid** 
+ **Grid**--
+ 
  my grid.scss file
  ```JavaScript
  $gap: 10px;//gap between columns
@@ -97,4 +99,4 @@ gulp.task('default', function () {
   }
 }```
 ```
-##License: https://gulpjs.com/
+License: https://gulpjs.com/
