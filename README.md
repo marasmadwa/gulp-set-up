@@ -10,6 +10,7 @@ Gulp is a toolkit that helps you automate painful or time-consuming tasks in you
 How to install gulp ? Check this website : (https://gulpjs.com/);
 
 my gulp set up:
+
 `const gulp = require("gulp");
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
@@ -61,13 +62,13 @@ gulp.task('default', function () {
     gulp.start(["sass", "browseSync", "watch"]);
 });`
 
- **Grid**
+ **Grid** 
  my grid.scss file
+ 
  `$gap: 10px;//gap between columns
 $columns: 12;// number of columns
 $breakpoint: 768px; 
 
-//Grid (don't touch!):
 .container {
   padding-left: $gap;
   padding-right: $gap;
