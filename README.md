@@ -4,7 +4,7 @@ My gulp set up which includes scss file with basic grid set up.
 
 ## Getting Started
 
-**What is gulp?**--
+**What is gulp?**
 
 Gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.
 
@@ -63,7 +63,7 @@ gulp.task('default', function () {
 });```
 
 ```
- **Grid**--
+ **Grid**
  
  my grid.scss file
  ```JavaScript
