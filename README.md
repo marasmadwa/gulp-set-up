@@ -11,7 +11,8 @@ How to install gulp ? Check this website : (https://gulpjs.com/);
 
 my gulp set up:
 
-```const gulp = require("gulp");
+```JavaScript
+const gulp = require("gulp");
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
