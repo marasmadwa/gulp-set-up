@@ -18,12 +18,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const gutil = require('gulp-util');
-
 const showErrors = function (err) {
     console.log(gutil.colors.red(err.toString()));
     this.emit('end');
 };
-
 gulp.task("browseSync", function () {
     browserSync.init({
         server: ".",
@@ -33,8 +31,6 @@ gulp.task("browseSync", function () {
         open: true 
     });
 });
-
-
 gulp.task('sass', function () {
     return gulp.src('./scss/main.scss')
         .pipe(plumber({
@@ -52,12 +48,10 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
 });
-
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
-
 gulp.task('default', function () {
     gulp.start(["sass", "browseSync", "watch"]);
 });`
@@ -68,7 +62,6 @@ gulp.task('default', function () {
  `$gap: 10px;//gap between columns
 $columns: 12;// number of columns
 $breakpoint: 768px; 
-
 .container {
   padding-left: $gap;
   padding-right: $gap;
@@ -86,7 +79,6 @@ $breakpoint: 768px;
         padding-left: $gap;
         padding-right: $gap;
         margin-bottom: 2*$gap;
-
         @media (min-width: $breakpoint) {
           width: (100/$columns*$i)*1%;
           float: left;
