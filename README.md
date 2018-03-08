@@ -61,12 +61,14 @@ gulp.task('default', function () {
     gulp.start(["sass", "browseSync", "watch"]);
 });```
 
+```
  **Grid** 
  my grid.scss file
- 
+ ```JavaScript
  $gap: 10px;//gap between columns
-$columns: 12;// number of columns
-$breakpoint: 768px; 
+ $columns: 12;// number of columns
+ $breakpoint: 768px; 
+ 
 .container {
   padding-left: $gap;
   padding-right: $gap;
@@ -78,12 +80,14 @@ $breakpoint: 768px;
       margin-left: -$gap;
       margin-right: -$gap;
     }
+    
     @for $i from 1 through $columns {
       .col-#{$i}-#{$columns} {
         box-sizing: border-box;
         padding-left: $gap;
         padding-right: $gap;
         margin-bottom: 2*$gap;
+        
         @media (min-width: $breakpoint) {
           width: (100/$columns*$i)*1%;
           float: left;
@@ -91,5 +95,6 @@ $breakpoint: 768px;
       }
     }
   }
-}`
-
+}```
+```
+##License: https://gulpjs.com/
