@@ -11,7 +11,7 @@ How to install gulp ? Check this website : (https://gulpjs.com/);
 
 my gulp set up:
 
-`const gulp = require("gulp");
+```const gulp = require("gulp");
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
@@ -21,8 +21,9 @@ const gutil = require('gulp-util');
 const showErrors = function (err) {
     console.log(gutil.colors.red(err.toString()));
     this.emit('end');
-};
-gulp.task("browseSync", function () {
+};```
+
+```gulp.task("browseSync", function () {
     browserSync.init({
         server: ".",
         notify: true,
@@ -30,8 +31,9 @@ gulp.task("browseSync", function () {
         //port: 3000,
         open: true 
     });
-});
-gulp.task('sass', function () {
+});```
+
+```gulp.task('sass', function () {
     return gulp.src('./scss/main.scss')
         .pipe(plumber({
             errorHandler: showErrors
@@ -47,14 +49,16 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
-});
-gulp.task('watch', function () {
+});```
+
+```gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
-});
-gulp.task('default', function () {
+});```
+
+```gulp.task('default', function () {
     gulp.start(["sass", "browseSync", "watch"]);
-});`
+});```
 
  **Grid** 
  my grid.scss file
